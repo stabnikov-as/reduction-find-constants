@@ -1,3 +1,4 @@
+#!/bin/env python
 import os
 import time
 import subprocess
@@ -116,6 +117,7 @@ def main():
     pwd = o.split('\n')[0] + '/'
     total_tasks = len(Ats) * len(Cts) * len(Csss) * len(a2s)
     add_to_log('amount of jobs = {}'.format(total_tasks))
+    add_to_log('max jobs       = {}'.format(max_jobs))
     min_error = 0
     for ct in Cts:  # Nested loops over all constants
         path1 = 'Ct_=_' + str(ct)
